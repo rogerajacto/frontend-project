@@ -1,5 +1,5 @@
 import NavegationBar from "./components/NavigationBar";
-import Hero from "./components/hero";
+import Hero from "./components/Hero";
 import LocationCard from "./components/LocationCard";
 import Footer from "./components/Footer";
 

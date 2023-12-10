@@ -10,7 +10,7 @@ function NavegationBar() {
             <ul className="navegation-items-list">
                 <li>  <img src="https://logomaker.designfreelogoonline.com/media/productdesigner/logo/resized/000816__travel_agency_logo_design_templates_free_travel_logo_maker-01.png" alt="logo" className="logo"></img></li>
 
-                <li id ="name">Roger a jacto travels</li>
+                <li id ="name">Roger Travels</li>
 
 
                 <li className="nav-item"> 
