@@ -10,8 +10,10 @@ function App() {
 
   return (
     <>
+      <div className="background">
       <NavegationBar/>
       <Hero/>
+      </div>
       <LocationCard/>
       <Footer/>
     </>

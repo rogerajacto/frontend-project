@@ -1,6 +1,9 @@
 function LocationCard() {
     return(
         <>
+            <hr/>
+            <h3>Latest</h3>
+
             <div className="card-container">
                 
                 <div className="card">

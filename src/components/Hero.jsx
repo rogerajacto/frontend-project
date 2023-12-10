@@ -8,8 +8,7 @@ function Hero () {
                     <button className="section-button">Add Location</button>
                </div>
             </section>
-            <hr/>
-            <h3>Latest</h3>
+
         </>
     )
     
