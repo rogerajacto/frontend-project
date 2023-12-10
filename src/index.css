@@ -1,0 +1,207 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display+SC&family=Rubik:ital,wght@0,400;0,700;1,400;1,700&family=Yellowtail&display=swap');
+
+
+@import url('https://fonts.googleapis.com/css2?family=Heebo&family=Playfair+Display+SC&family=Rubik:ital,wght@0,400;0,700;1,400;1,700&family=Yellowtail&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Heebo&family=Pacifico&family=Playfair+Display+SC&family=Rubik:ital,wght@0,400;0,700;1,400;1,700&family=Yellowtail&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Courier+Prime&family=Heebo&family=Homemade+Apple&family=Pacifico&family=Playfair+Display+SC&family=Rubik:ital,wght@0,400;0,700;1,400;1,700&family=Satisfy&family=Yellowtail&family=Yomogi&display=swap');
+*{
+  box-sizing: border-box;
+}
+
+body{
+  margin: 0 1rem;
+}
+
+
+.navegation-menu{
+
+  background-color: rgb(233, 211, 165);
+  /* border: 2px solid rgb(182, 126, 4); */
+  border-top-right-radius:  5px;
+  border-top-left-radius:  5px;
+  
+  
+}
+ 
+
+.navegation-items-list{
+
+padding: 0.5%;
+list-style-type: none;
+display: flex;
+justify-content: end;
+align-items: center;
+gap: 10px;
+
+
+
+}
+
+#name{
+  margin-right: auto;
+  /* font-family: 'Playfair Display SC', serif; */
+  font-family: 'Pacifico', cursive;
+  font-weight: 700;
+  font-size: 2.5rem;
+  color: #555;
+  text-shadow: 2px 2px #FFF;
+  
+}
+
+.logo{
+  width: 50px;
+
+}
+
+i{
+  padding: 5px;
+}
+
+.nav-item{
+  text-align: center;
+  font-family: 'Playfair Display SC', serif;
+  color: #555;
+  transition: all 0.2s;
+}
+
+.nav-item:hover{
+  cursor: pointer;
+  color: #FFF;
+  transition: all 0.2s;
+}
+
+li > div{
+  text-align: center;
+  padding: 0 20px;
+}
+
+.hero-section{
+  height: 500px;
+  background-image: url("https://wallpapercave.com/wp/wp9663896.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+}
+
+.hero-title {
+  font-family: 'Playfair Display SC', serif;
+  color: #FFF;
+  inline-size: 600px;
+  font-weight: 900;
+  font-size: 2.5rem;
+  text-align: center;
+  margin: 0 auto;
+  margin-top: 150px;
+  text-shadow: 2px 5px #000;
+}
+.button-container{
+  margin: 0 auto;
+  margin-top: 100px;
+}
+
+.section-button{
+  color: #555;
+  margin: 10px;
+  width: 150px;
+  height: 50px;
+  border: 3px solid #fff;
+  background-color: #FFF;
+  font-family: 'Playfair Display SC', serif;
+  font-weight: 700;
+  border-radius: 3px;
+  transition: all 0.3s;
+  
+}
+
+.section-button:hover{
+
+  cursor: pointer;
+  background-color: transparent;
+  color: #FFF;
+  
+  transition: all 0.3s;
+  transform-origin: left;
+}
+
+hr{
+  margin-top: 20px;
+  background-color: #555;
+  height: 4px;
+  border-radius: 5px;
+  width: 75%;
+}
+
+h3{
+  color: #555;
+  font-family: 'Playfair Display SC', serif;
+  font-size: 2rem;
+  text-align: center;
+}
+
+
+.card-container{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+
+.card{
+  background-color: rgb(233, 211, 165);
+  width: 200px;
+  border-radius: 15px;
+  margin-bottom: 10px;
+  transition: all 0.3s;
+}
+
+.card:hover{
+  cursor: pointer;
+  background-image: linear-gradient(to bottom, rgb(233, 211, 165), rgb(248, 238, 209));
+  width: 215px;
+  transition: all 0.3s;
+  
+}
+
+.card > img{
+  width: 100%;
+  border-top-right-radius: 15px ;
+  border-top-left-radius: 15px ;
+}
+
+.card > h3{
+  color: #555;
+  font-family: 'Playfair Display SC', serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+  text-align: center;
+  text-shadow: 1px 3px #FFF
+
+}
+.card > p{
+  text-align: center;
+  font-family: 'Heebo', sans-serif;
+  font-size: 1rem;
+  color: #555;
+  font-weight: 700;
+}
+
+
+footer{
+  background-color: rgb(233, 211, 165);
+  margin-top: 50px;
+  min-height: 150px;
+}
+
+footer p, footer i{
+  text-align: left;
+  font-family: 'Heebo', sans-serif;
+  font-size: 1rem;
+  color: #555;
+  font-weight: 700;
+}
+
