@@ -1,3 +1,7 @@
+import { Link } from "wouter";
+
+
+
 function NavegationBar() {
     return(
         <>
@@ -12,24 +16,27 @@ function NavegationBar() {
 
                 <li id ="name">Roger Travels</li>
 
-
+                <Link href="/">
                 <li className="nav-item"> 
                     
                      <div>   <i class="fa-solid fa-house"></i></div>
                      Home
-                </li>
-
+                </li> 
+                </Link>
 
                 <li className="nav-item">
                     <div><i className="fa-solid fa-map-pin"></i></div>
                      Add location
                 </li>
 
-
-                <li className="nav-item">
+  
+                <Link href="/about-me">
+                    
+                    <li className="nav-item">
                     <div><i className="fa-solid fa-user"></i></div> 
                     About me
                 </li>
+                </Link>
             </ul>
         </nav>
 
