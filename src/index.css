@@ -58,10 +58,11 @@ gap: 10px;
 #name{
   margin-right: auto;
   font-family: 'Playfair Display SC', serif;
+  text-shadow: 2px 2px #444;
   /* font-family: 'Pacifico', cursive; */
   font-weight: 700;
   font-size: 2.0rem;
-  color: #444;
+  color: #FFF;
 
   
 }
@@ -78,13 +79,13 @@ i{
 .nav-item{
   text-align: center;
   font-family: 'Playfair Display SC', serif;
-  color: #444;
+  color: #fff;
   transition: all 0.2s;
 }
 
 .nav-item:hover{
   cursor: pointer;
-  color: #FFF;
+  color: #444;
   transition: all 0.2s;
 }
 
@@ -150,7 +151,7 @@ hr{
   width: 75%;
 }
 
-h3{
+h2, h3{
   color: #444;
   font-family: 'Playfair Display SC', serif;
   font-size: 2rem;
@@ -286,3 +287,47 @@ margin: 5px 20px;
   word-spacing: 2px;
 }
 
+/* PROFILE DESIGN */
+
+.profile-background{
+  background: linear-gradient( to right , #30a3d0, #330867);
+  height: 400px ;
+}
+
+.profile-card{
+  /* display: flex;
+  gap: 50px;
+  align-items: center; */
+  background-color: #FFF;
+  border-radius: 20px;
+  box-shadow: 0 35px 80px rgba(0,0,0,1);
+  margin: 0 auto;
+  margin-top: 100px;
+  margin-bottom: 200px;
+  width: 60%;
+  padding: 20px;
+  /* height: 500px; */
+
+}
+
+.profile-card img{
+  float: left;
+  width: 300px;
+  border-radius: 20px;
+  box-shadow: 0 35px 80px rgba(0,0,0,0.5);
+  margin-right: 30px;
+  margin-bottom: 30px;
+}
+
+.profile-info h2{
+  text-align: center;
+  font-family: 'Playfair Display SC', serif;
+  color: #444;
+}
+
+.profile-info p{
+  text-align: left;
+  font-size: 1rem;
+  font-family: 'Heebo', sans-serif; 
+  color: #444;
+}
