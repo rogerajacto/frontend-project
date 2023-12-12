@@ -8,28 +8,20 @@ import NavegationBar from "../components/NavigationBar";
 
 function AddLocationView() {
 
-
-    (function StoreInfo() {
-        const userForm = document.querySelector("#userForm");
+function AddInfo(event) {
     
-        userForm.addEventListener("submit", function(event){
-        event.preventDefault();
-    
-        const fd = new FormData (userForm);
-        console.log(fd);
-        const newPlace = {
-            City: fd.get("City"),
-            Country: fd.get("Country"),
-            From: fd.get("From"),
-            To: fd.get("To")
-        }
-        console.log(newPlace)
-    
-        })
-    })()
+    event.preventDefault();
 
+    const fd = new FormData (userForm);
 
-  
+    const newPlace = {
+        City: fd.get("City"),
+        Country: fd.get("Country"),
+        From: fd.get("From"),
+        To: fd.get("To")
+    }
+    console.log(newPlace)
+}
 
 
 
@@ -44,7 +36,7 @@ function AddLocationView() {
             <div className="form-container">
             
             
-            <form className="add-location-card" id="userForm" > 
+            <form className="add-location-card" id="userForm" onSubmit={AddInfo} > 
 
                 <label><i class="fa-solid fa-city"></i>City</label>
                 <input type="text" placeholder="Give Us A City!" name = "City"></input>
