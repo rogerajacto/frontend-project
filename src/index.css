@@ -289,10 +289,8 @@ margin: 5px 20px;
   height: 400px ;
 }
 
-.profile-card{
-  /* display: flex;
-  gap: 50px;
-  align-items: center; */
+.profile-card, .add-location-card{
+
   background-color: #FFF;
   border-radius: 20px;
   box-shadow: 0 35px 80px rgba(0,0,0,1);
@@ -301,7 +299,7 @@ margin: 5px 20px;
   margin-bottom: 200px;
   width: 60%;
   padding: 20px;
-  /* height: 500px; */
+
 
 }
 
