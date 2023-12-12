@@ -9,24 +9,24 @@ import NavegationBar from "../components/NavigationBar";
 function AddLocationView() {
 
 
-    // (function StoreInfo() {
-    //     const userForm = document.querySelector("#userForm");
+    (function StoreInfo() {
+        const userForm = document.querySelector("#userForm");
     
-    //     userForm.addEventListener("submit", function(event){
-    //     event.preventDefault();
+        userForm.addEventListener("submit", function(event){
+        event.preventDefault();
     
-    //     const fd = new FormData (userForm);
-    //     console.log(fd);
-    //     const newPlace = {
-    //         City: fd.get("City"),
-    //         Country: fd.get("Country"),
-    //         From: fd.get("From"),
-    //         To: fd.get("To")
-    //     }
-    //     console.log(newPlace)
+        const fd = new FormData (userForm);
+        console.log(fd);
+        const newPlace = {
+            City: fd.get("City"),
+            Country: fd.get("Country"),
+            From: fd.get("From"),
+            To: fd.get("To")
+        }
+        console.log(newPlace)
     
-    //     })
-    // })()
+        })
+    })()
 
 
   
