@@ -23,11 +23,13 @@ function NavegationBar() {
                      Home
                 </li> 
                 </Link>
-
+                
+                <Link href="/add-location">
                 <li className="nav-item">
                     <div><i className="fa-solid fa-map-pin"></i></div>
                      Add location
                 </li>
+                </Link>
 
   
                 <Link href="/about-me">
