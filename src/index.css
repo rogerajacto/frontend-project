@@ -246,13 +246,32 @@ h2, h3{
   font-weight: 700;
 } 
 
+.card-container-button{
+  font-family:'Playfair Display SC', serif;
+  color: #444;
+  font-weight: 700;
+  letter-spacing: 3px;
+  border-radius: 5px;
+  padding: 5px;
+  transition: all 0.5s;
+}
+
+
+.card-container-button:hover{
+  cursor: pointer;
+  background: #444;
+  color: #FFF;
+  transition: all 0.5s;
+
+}
+
+
 .card-content h3{
   text-align: center;
   font-family: 'Playfair Display SC', serif;
   color: #444;
   
 }
-
 
 footer{
   background-image: linear-gradient( to right , #30a3d0, #330867);
@@ -287,6 +306,11 @@ margin: 5px 20px;
 .profile-background{
   background: linear-gradient( to right , #30a3d0, #330867);
   height: 400px ;
+}
+
+.add-location-background{
+  background: url("https://media.cntraveler.com/photos/5fc6818f3cfe1de2cab79372/16:9/w_1600%2Cc_limit/Amsterdam-GettyImages-840603854.jpg");
+  height: 400px;
 }
 
 .profile-card{
@@ -333,15 +357,15 @@ margin: 5px 20px;
 
 .form-container{
   display: flex;
-  gap: 50px;
   /* align-items: center; */
   background-color: #fff;
   margin: 0 auto;
   width: fit-content;
-    margin-top: 100px;
+  margin-top: 100px;
   margin-bottom: 200px;
   border-radius: 20px;
   box-shadow: 0 35px 80px rgba(0,0,0,1);
+
 
 }
 .form-title{
@@ -351,17 +375,16 @@ margin: 5px 20px;
   inline-size: 180px;
   font-size: 1.5rem;
   text-align: right;
-  /* margin-top: 150px; */
-  display: none;
+  padding: 10px;
+  margin-right: 20px;
 }
 
  .add-location-card{
-
   background-color: #FFF;
-  border-radius: 20px;
-  box-shadow: 0 35px 80px rgba(0,0,0,1);
-  padding: 20px;  
+  border-radius: 0 20PX 20px 0;
+  padding: 10px;  
   height: fit-content;
+  border-left: 10px solid #330867 ;
 }
 
 form label{
@@ -385,19 +408,42 @@ form input{
   margin-top: 5px;
 }
 
-
+#form-textarea{
+  border: 3px solid #444 ;
+  display: block; 
+  border-radius: 15px;
+  width: 75%;
+  height: 100px;
+  padding: 10px;
+  margin:20px auto;
+  margin-top: 5px;
+ 
+}
 
 .submit-button{
   display: block;
   margin: 50px auto;
+  border-radius: 15px;
   width: 75%;
+  height: 50px;
+  font-family:'Playfair Display SC', serif;
+  color: #444;
+  font-weight: 700;
+  letter-spacing: 3px;
+  transition: all 0.3s;
+}
+.submit-button:hover{
+  cursor: pointer;
   background: linear-gradient( to right , #30a3d0, #330867);
+  box-shadow: 10px 10px 15px #330867, -10px -10px 15px #238eb8;
   font-family:'Playfair Display SC', serif;
   color: #FFF;
+  transition: 0.3s;
 
 }
 
 .form-date{
   display: flex;
-  gap: 40px
+  gap: 30px;
+  margin: 15px;
 }

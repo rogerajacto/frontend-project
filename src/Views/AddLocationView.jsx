@@ -8,34 +8,37 @@ import NavegationBar from "../components/NavigationBar";
 
 function AddLocationView() {
 
-function AddInfo(event) {
     
+function AddInfo(event) {
+
     event.preventDefault();
 
     const fd = new FormData (userForm);
 
-    const newPlace = {
+    let newPlace= {
         City: fd.get("City"),
         Country: fd.get("Country"),
         From: fd.get("From"),
         To: fd.get("To")
-    }
+    } 
+      
+      
     console.log(newPlace)
+
+    return newPlace
 }
-
-
-
 
     return(
         <>
-         <div className="profile-background">
+         <div className="add-location-background">
             <NavegationBar/>
 
-            <h2 className="form-title">Please Leave Me a Sugegestion for my next travel!</h2>
+            
 
             <div className="form-container">
             
-            
+            <h2 className="form-title">Please Leave Me a Sugegestion for my next travel!</h2>
+
             <form className="add-location-card" id="userForm" onSubmit={AddInfo} > 
 
                 <label><i class="fa-solid fa-city"></i>City</label>
@@ -56,10 +59,15 @@ function AddInfo(event) {
                     </div>
                 </div>
 
-                <input type="submit" className="submit-button" ></input>
+                <textarea placeholder="Why shoud I visit this place?" id="form-textarea"></textarea>
+
+                <input type="submit" className="submit-button" value={"Save"}>
+                
+                </input>
 
             </form>
             </div>
+
             <Footer/>
          </div>
          
