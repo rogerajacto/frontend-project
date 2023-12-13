@@ -1,30 +1,8 @@
 import { useState } from "react";
 import { useEffect } from "react";
+import { Link } from "wouter";
 
-function LocationCard() {
-
-
-const [locationInfo, setlocationInfo] = useState([]);
-
-async function getInfo () {
-    const path = "../public/mockAPI.JSON"
-
-    const response = await fetch (path);
-    const result = await response.json()
-
-    setlocationInfo(result);
-}
-
-useEffect(function () {
-    getInfo()
-},[])
-
-
-console.log(locationInfo)
-
-
-
-
+function LocationCard({locationInfo}) {
 
     return(
         <>
@@ -44,8 +22,8 @@ console.log(locationInfo)
 
                             <h3>{info.city}</h3>
                             <p>{info.Country}</p>
-                            <p>{info.from + "-" + info.to } </p>
-                            <button className="card-container-button">Show More</button>
+                            <p>{info.from + " - " + info.to } </p>
+                            <Link  href="/details" className="card-container-button">Show More</Link>
                         </div>
                     </div>
                     </>

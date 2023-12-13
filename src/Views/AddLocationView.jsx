@@ -19,7 +19,8 @@ function AddInfo(event) {
         City: fd.get("City"),
         Country: fd.get("Country"),
         From: fd.get("From"),
-        To: fd.get("To")
+        To: fd.get("To"),
+        Textarea: fd.get ("textarea")
     } 
       
       
@@ -59,7 +60,7 @@ function AddInfo(event) {
                     </div>
                 </div>
 
-                <textarea placeholder="Why shoud I visit this place?" id="form-textarea"></textarea>
+                <textarea placeholder="Why shoud I visit this place?" id="form-textarea" name="textarea"></textarea>
 
                 <input type="submit" className="submit-button" value={"Save"}>
                 

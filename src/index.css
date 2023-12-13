@@ -244,15 +244,18 @@ h2, h3{
   font-size: 1rem;
   color: #444;
   font-weight: 700;
+  margin-bottom: 40px;
 } 
 
 .card-container-button{
   font-family:'Playfair Display SC', serif;
   color: #444;
   font-weight: 700;
+  border: 2px solid #444;
   letter-spacing: 3px;
   border-radius: 5px;
   padding: 5px;
+  text-decoration: none;
   transition: all 0.5s;
 }
 
@@ -261,6 +264,7 @@ h2, h3{
   cursor: pointer;
   background: #444;
   color: #FFF;
+  box-shadow:  5px 5px 50px rgba(0,0,0,1);
   transition: all 0.5s;
 
 }
@@ -311,6 +315,9 @@ margin: 5px 20px;
 .add-location-background{
   background: url("https://media.cntraveler.com/photos/5fc6818f3cfe1de2cab79372/16:9/w_1600%2Cc_limit/Amsterdam-GettyImages-840603854.jpg");
   height: 400px;
+  background-position: top;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 .profile-card{
