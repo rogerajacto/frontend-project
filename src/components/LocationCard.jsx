@@ -1,5 +1,3 @@
-import { useState } from "react";
-import { useEffect } from "react";
 import { Link } from "wouter";
 
 function LocationCard({locationInfo}) {
@@ -23,7 +21,7 @@ function LocationCard({locationInfo}) {
                             <h3>{info.city}</h3>
                             <p>{info.Country}</p>
                             <p>{info.from + " - " + info.to } </p>
-                            <Link  href="/details" className="card-container-button">Show More</Link>
+                            <Link  href="/details/" className="card-container-button">Show More</Link>
                         </div>
                     </div>
                     </>

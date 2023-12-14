@@ -38,7 +38,7 @@ function AddInfo(event) {
 
             <div className="form-container">
             
-            <h2 className="form-title">Please Leave Me a Sugegestion for my next travel!</h2>
+            <h2 className="form-title">Please Leave Me a Suggestion for my next travel!</h2>
 
             <form className="add-location-card" id="userForm" onSubmit={AddInfo} > 
 
