@@ -1,15 +1,16 @@
 import { useEffect, useState } from "react";
 
-function Weather() {
+function Weather({locationInfo}) {
 
 const weatherKey = "2749a85beba444bb900a49319521bbc0";
 const weatherURL = "https://api.openweathermap.org/data/2.5/";
 
+
+
 const [weatherData, setweatherData] = useState([]);
 
-
 async function getData() {
-    const response = await fetch (weatherURL + "weather?q=queens&units=metric&appid=" + weatherKey);
+    const response = await fetch (weatherURL + "weather?q="+ locationInfo.data?.[0].weather_name + "&units=metric&appid=" + weatherKey);
 
     const result = await response.json();
 
@@ -22,10 +23,30 @@ useEffect (function () {
 
 
 console.log(weatherData)
+
+const [forecastInfo, setforecastInfo] = useState([]);
+
+const forecastURL = "https://api.openweathermap.org/data/2.5/forecast?";
+
+const latitude = "lat=" + weatherData.coord?.lat;
+const longitude = "&lon=" + weatherData.coord?.lon;
+
+async function getForecastData() {
+
+    const response = await fetch (forecastURL + latitude + longitude + "&appid=" + weatherKey)
+
+    const result = await response.json();
+
+    setforecastInfo(result);
+
+}
+
+useEffect(function () {
+    getForecastData()
+},[])
+
+console.log(forecastInfo)
    
-
-
-
 
 
     return(

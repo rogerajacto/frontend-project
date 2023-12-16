@@ -22,8 +22,9 @@ function PlaceDetailView({locationInfo}) {
                     <h3 className="city-date"><i class="fa-solid fa-calendar-days"></i>{locationInfo.data?.[0].from + " - " + locationInfo.data?.[0].to} </h3>
                     <p className="city-details">{locationInfo.data?.[0].info}</p>      
                 </div>
-                <Weather/>
+                <Weather locationInfo={locationInfo}/>
             </div>
+
         <Footer/>
         </div>
         
