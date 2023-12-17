@@ -17,19 +17,16 @@ async function getData() {
     setweatherData(result);
 }
 
-useEffect (function () {
-    getData();    
-}, [])
-
 
 console.log(weatherData)
 
-const [forecastInfo, setforecastInfo] = useState([]);
-
-const forecastURL = "https://api.openweathermap.org/data/2.5/forecast?";
-
 const latitude = "lat=" + weatherData.coord?.lat;
 const longitude = "&lon=" + weatherData.coord?.lon;
+const forecastURL = "https://api.openweathermap.org/data/2.5/forecast?";
+
+const [forecastInfo, setforecastInfo] = useState([]);
+
+
 
 async function getForecastData() {
 
@@ -41,8 +38,23 @@ async function getForecastData() {
 
 }
 
+
+
+
+
+
+
 useEffect(function () {
-    getForecastData()
+
+    (async function getAll () {
+
+        await getData();
+        await getForecastData();
+        
+        
+        
+    })()
+
 },[])
 
 console.log(forecastInfo)
