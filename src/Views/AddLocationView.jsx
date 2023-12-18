@@ -42,20 +42,20 @@ function AddInfo(event) {
 
             <form className="add-location-card" id="userForm" onSubmit={AddInfo} > 
 
-                <label><i class="fa-solid fa-city"></i>City</label>
+                <label><i className="fa-solid fa-city"></i>City</label>
                 <input type="text" placeholder="Give Us A City!" name = "City"></input>
 
-                <label><i class="fa-solid fa-flag"></i>Country</label>
+                <label><i className="fa-solid fa-flag"></i>Country</label>
                 <input type="text" placeholder="Give Us A Country!" name="Country"></input>
 
                 <div className="form-date">
                     <div>
-                        <label><i class="fa-solid fa-calendar-days"></i>From</label>
+                        <label><i className="fa-solid fa-calendar-days"></i>From</label>
                         <input type="date" name="From"></input>
                     </div>
 
                     <div>
-                        <label><i class="fa-regular fa-calendar-days"></i>To</label>
+                        <label><i className="fa-regular fa-calendar-days"></i>To</label>
                         <input type="date" name="To"></input>
                     </div>
                 </div>

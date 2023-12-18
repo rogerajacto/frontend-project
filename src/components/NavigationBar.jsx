@@ -19,7 +19,7 @@ function NavegationBar() {
                 <Link href="/">
                 <li className="nav-item"> 
                     
-                     <div>   <i class="fa-solid fa-house"></i></div>
+                     <div>   <i className="fa-solid fa-house"></i></div>
                      Home
                 </li> 
                 </Link>

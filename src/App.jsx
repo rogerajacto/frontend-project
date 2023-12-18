@@ -52,7 +52,7 @@ function App() {
         <AddLocationView/>
       </Route>
 
-      <Route path="/details/">
+      <Route path="/details/1">
       <PlaceDetailView locationInfo={locationInfo}/>
       </Route>
 

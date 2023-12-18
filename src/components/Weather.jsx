@@ -9,10 +9,18 @@ const weatherURL = "https://api.openweathermap.org/data/2.5/";
 
 const [weatherData, setweatherData] = useState([]);
 
-async function getData() {
-    const response = await fetch (weatherURL + "weather?q="+ locationInfo.data?.[0].weather_name + "&units=metric&appid=" + weatherKey);
+let latitude;
+let longitude;
 
+async function getData() {
+
+
+    const response = await fetch (weatherURL + "weather?q="+ locationInfo.data?.[0].weather_name + "&units=metric&appid=" + weatherKey);
+    
     const result = await response.json();
+
+    latitude = "lat=" + result.coord?.lat;
+    longitude = "&lon=" + result.coord?.lon;
 
     setweatherData(result);
 }
@@ -20,8 +28,7 @@ async function getData() {
 
 console.log(weatherData)
 
-const latitude = "lat=" + weatherData.coord?.lat;
-const longitude = "&lon=" + weatherData.coord?.lon;
+
 const forecastURL = "https://api.openweathermap.org/data/2.5/forecast?";
 
 const [forecastInfo, setforecastInfo] = useState([]);
@@ -30,46 +37,65 @@ const [forecastInfo, setforecastInfo] = useState([]);
 
 async function getForecastData() {
 
-    const response = await fetch (forecastURL + latitude + longitude + "&appid=" + weatherKey)
+    const response = await fetch (forecastURL + latitude + longitude + "&units=metric&appid=" + weatherKey)
 
     const result = await response.json();
 
-    setforecastInfo(result);
+    const newResult = [
+        result.list[0],
+        result.list[8],
+        result.list[16],
+        result.list[24],
+        result.list[32]
+    ]
+
+
+
+    setforecastInfo(newResult);
 
 }
-
-
-
-
-
 
 
 useEffect(function () {
 
     (async function getAll () {
-
         await getData();
         await getForecastData();
-        
-        
-        
     })()
 
 },[])
-
-console.log(forecastInfo)
    
-
+console.log(forecastInfo)
 
     return(
         <>
         <div className="weather-container">
-            <h2>Current Weather</h2>
-            <h3>{weatherData.name}</h3>
-            <img className="weather-icon" src={"https://openweathermap.org/img/wn/"+ weatherData.weather?.[0].icon + ".png"} alt = "weathericon"></img>
-            <h3>{Math.round(weatherData.main?.temp)}ºC</h3>
-            <h3>{weatherData.weather?.[0].main}</h3>
-            <h3>{weatherData.weather?.[0].description}</h3>
+
+            <div className="current-weather">
+                <h2>Current Weather</h2>
+                <h3>{weatherData.name}</h3>
+                <img className="weather-icon" src={"https://openweathermap.org/img/wn/"+ weatherData.weather?.[0].icon + ".png"} alt = "weathericon"></img>
+                <h3>{Math.round(weatherData.main?.temp)}ºC</h3>
+                <h3>{weatherData.weather?.[0].main}</h3>
+                <h3>{weatherData.weather?.[0].description}</h3>
+            </div>
+            <hr/>
+            <h3>Forecast:</h3>
+            <div className="forecast">
+                {forecastInfo?.map(function (item) {
+                return(
+                    <>
+                        <p>{item.dt_txt} :</p>
+                        <p>{Math.round(item.main.temp) + " ºC"}</p>
+                        <img className="weather-icon" src={"https://openweathermap.org/img/wn/"+ item.weather?.[0].icon + ".png"} alt = "weathericon"></img>
+                        <p>{item.weather[0].main}</p>
+                        <hr />
+
+                    </>
+                )
+                
+            })}
+            </div>
         </div>
         </>
     )

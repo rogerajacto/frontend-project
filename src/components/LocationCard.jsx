@@ -12,7 +12,7 @@ function LocationCard({locationInfo}) {
             {locationInfo.data?.map(function (info) {
                 return(
                     <>
-                    <div className="card">
+                    <div className="card" >
                         <div className="card-img-box">
                             <img src={info.mainIMG} alt="image of NYC"></img>
                         </div>
@@ -21,7 +21,7 @@ function LocationCard({locationInfo}) {
                             <h3>{info.city}</h3>
                             <p>{info.Country}</p>
                             <p>{info.from + " - " + info.to } </p>
-                            <Link  href="/details/" className="card-container-button">Show More</Link>
+                            <Link  href={"/details/" + info.id } className="card-container-button">Show More</Link>
                         </div>
                     </div>
                     </>

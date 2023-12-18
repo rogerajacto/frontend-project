@@ -501,13 +501,12 @@ form input{
 .city-info-wrapper{
 display: flex;
 padding: 30px;
-margin-right: 100px;
+/* margin-right: 100px; */
 }
 
 
 .weather-container{
-  margin: 0 auto;
-  width: 20%;
+
   background: linear-gradient( to right , #30a3d0, #330867);
   border-radius: 30px;
   padding: 30px;
@@ -526,4 +525,19 @@ margin-right: 100px;
 
 .weather-container h2{
   color: #FFF;
+}
+
+
+.forecast{
+  padding: 15px;
+}
+
+.forecast p {
+  font-family: 'Heebo', sans-serif;
+  font-size: 0.7rem; 
+  color: #FFF;
+  text-align: center;
+  padding: 0%;
+  margin: 0;
+  margin-bottom: 5px;
 }
