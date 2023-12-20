@@ -16,7 +16,7 @@ function App() {
   const [locationInfo, setlocationInfo] = useState([]);
 
   async function getInfo () {
-      const path = "./public/mockAPI.JSON"
+      const path = "/mockAPI.JSON"
   
       const response = await fetch (path);
       const result = await response.json()
@@ -52,8 +52,8 @@ function App() {
         <AddLocationView/>
       </Route>
 
-      <Route path="/details/1">
-      <PlaceDetailView locationInfo={locationInfo}/>
+      <Route path="/details/:id">
+      {(params) => <PlaceDetailView id={params.id} />}
       </Route>
 
     </Switch>

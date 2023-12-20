@@ -10,7 +10,7 @@ import "swiper/css/scrollbar";
 
 
 
-function Carousel({locationInfo}) {
+function Carousel({sliders}) {
 
     return(
         <>
@@ -20,7 +20,7 @@ function Carousel({locationInfo}) {
             pagination ={{clickable: true}}
             navigation>
 
-                {locationInfo.data?.[0].sliders?.map(function (img) {
+                {sliders?.map(function (img) {
 
                     return(
                         <>

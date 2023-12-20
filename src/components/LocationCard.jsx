@@ -21,7 +21,7 @@ function LocationCard({locationInfo}) {
                             <h3>{info.city}</h3>
                             <p>{info.Country}</p>
                             <p>{info.from + " - " + info.to } </p>
-                            <Link  href={"/details/" + info.id } className="card-container-button">Show More</Link>
+                            <a  href={"/details/" + info.id } className="card-container-button">Show More</a>
                         </div>
                     </div>
                     </>

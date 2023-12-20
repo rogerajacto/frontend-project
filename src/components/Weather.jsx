@@ -1,29 +1,23 @@
 import { useEffect, useState } from "react";
 
-function Weather({locationInfo}) {
+function Weather({cityWeather}) {
 
-const weatherKey = "2749a85beba444bb900a49319521bbc0";
+const weatherKey = "2cd7b6ab14f71dfaf8906c1a89abbbf4";
 const weatherURL = "https://api.openweathermap.org/data/2.5/";
 
 
 
 const [weatherData, setweatherData] = useState([]);
 
-let latitude;
-let longitude;
-
 async function getData() {
-
-
-    const response = await fetch (weatherURL + "weather?q="+ locationInfo.data?.[0].weather_name + "&units=metric&appid=" + weatherKey);
     
+    
+    const response = await fetch (weatherURL + "weather?q="+ cityWeather?.weather_name + "&units=metric&appid=" + weatherKey);
+
     const result = await response.json();
 
-    latitude = "lat=" + result.coord?.lat;
-    longitude = "&lon=" + result.coord?.lon;
-
     setweatherData(result);
-}
+    }
 
 
 console.log(weatherData)
@@ -37,7 +31,7 @@ const [forecastInfo, setforecastInfo] = useState([]);
 
 async function getForecastData() {
 
-    const response = await fetch (forecastURL + latitude + longitude + "&units=metric&appid=" + weatherKey)
+    const response = await fetch (forecastURL + "&lat="+ cityWeather?.lat + "&lon=" + cityWeather?.lon + "&units=metric&appid=" + weatherKey)
 
     const result = await response.json();
 
@@ -58,14 +52,13 @@ async function getForecastData() {
 
 useEffect(function () {
 
-    (async function getAll () {
-        await getData();
-        await getForecastData();
-    })()
+    getData();
+    getForecastData();
 
-},[])
+
+},[cityWeather])
    
-console.log(forecastInfo)
+// console.log(forecastInfo)
 
     return(
         <>
@@ -82,7 +75,7 @@ console.log(forecastInfo)
             <hr/>
             <h3>Forecast:</h3>
             <div className="forecast">
-                {forecastInfo?.map(function (item) {
+                {forecastInfo?.map(function (item) { 
                 return(
                     <>
                         <p>{item.dt_txt} :</p>

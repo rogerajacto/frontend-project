@@ -23,9 +23,8 @@ function AddInfo(event) {
         Textarea: fd.get ("textarea")
     } 
       
-      
+     
     console.log(newPlace)
-
     return newPlace
 }
 
@@ -68,10 +67,9 @@ function AddInfo(event) {
 
             </form>
             </div>
-
             <Footer/>
          </div>
-         
+
         </>
     )
 }
