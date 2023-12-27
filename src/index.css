@@ -541,3 +541,16 @@ padding: 30px;
   margin: 0;
   margin-bottom: 5px;
 }
+
+
+
+/* MAIN MAP STYLE */
+
+.main-map-container{
+  width: 100vw;
+  height: 500px;
+}
+
+.location-pin:hover{
+cursor:  pointer;
+}

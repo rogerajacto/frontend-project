@@ -8,6 +8,7 @@ import AddLocationView from "./Views/AddLocationView";
 import PlaceDetailView from "./Views/PlaceDetailView";
 import { useState } from "react";
 import { useEffect } from "react";
+import MainMap from "./components/MainMap";
 
 
 
@@ -40,7 +41,11 @@ function App() {
         <Hero/>
         </div>
         <LocationCard locationInfo={locationInfo}/>
+        <MainMap locationInfo={locationInfo}/>
+        
         <Footer/>
+        
+        
       </Route>
 
       <Route path="/about-me">
