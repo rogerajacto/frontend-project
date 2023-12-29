@@ -20,7 +20,7 @@ function MainMap({locationInfo}) {
 
         <div className='main-map-container'>
           <Map
-           style={{width: "100vw", height: "500px"}}
+
             {...viewState}
             mapboxAccessToken= {token}
             onMove={function (state) {

@@ -3,6 +3,7 @@ import Carousel from "../components/Carousel";
 import Footer from "../components/Footer";
 import NavegationBar from "../components/NavigationBar";
 import Weather from "../components/Weather";
+import SpecificMap from "../components/SpecificMap";
 
 function PlaceDetailView({id}) {
 
@@ -18,12 +19,28 @@ function PlaceDetailView({id}) {
           const foundElement = result.data.find((elem) => {
             return elem.id == id;
           });
-          console.log(foundElement);
+          // console.log(foundElement);
 
           setcity(foundElement);
 
         })();
       }, []);
+
+      function getCoordinates() {
+        
+        if (city.lat != undefined) {
+          return (<SpecificMap city={city}/>)
+        }
+  
+      }
+
+      function getWeather() {
+        
+        if (city.lat != undefined) {
+          return (<Weather cityWeather={city} />)
+        }
+  
+      }
 
 
 
@@ -44,10 +61,14 @@ function PlaceDetailView({id}) {
                     
                     <h3 className="country-name"><i class="fa-solid fa-flag"></i>{city.country}</h3>
                     <h3 className="city-date"><i class="fa-solid fa-calendar-days"></i>{city.from + " - " + city.to} </h3>
-                    <p className="city-details">{city.info}</p>      
+                    <p className="city-details">{city.info}</p> 
+                    
+                    {getCoordinates()}
+
                 </div>
 
-            <Weather cityWeather={city} />
+                  {getWeather()}
+            
             </div>
 
         <Footer/>

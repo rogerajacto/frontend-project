@@ -20,24 +20,19 @@ body{
 
 }
 
-.navegation-menu{
 
-  border-top-right-radius:  5px;
-  border-top-left-radius:  5px;
-  
-  
-}
 
 
 
 .background{
+  width: 100%;
   height: 700px;
   background-image: url("./assets/background.jpg");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
 }
-
+ 
 
 .navegation-items-list{
 
@@ -554,3 +549,4 @@ padding: 30px;
 .location-pin:hover{
 cursor:  pointer;
 }
+

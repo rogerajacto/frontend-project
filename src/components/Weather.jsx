@@ -20,7 +20,7 @@ async function getData() {
     }
 
 
-console.log(weatherData)
+// console.log(weatherData)
 
 
 const forecastURL = "https://api.openweathermap.org/data/2.5/forecast?";
@@ -56,7 +56,7 @@ useEffect(function () {
     getForecastData();
 
 
-},[cityWeather])
+},[])
    
 // console.log(forecastInfo)
 
