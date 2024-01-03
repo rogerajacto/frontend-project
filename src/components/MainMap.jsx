@@ -38,11 +38,12 @@ function MainMap({locationInfo}) {
       {locationInfo.data?.map(function (info) {
         return (<>
 
-              <div className='location-pin'>
-                <a href= {"/details/" + info.id } >
-                <Marker latitude={info.lat} longitude={info.lon}></Marker>
-                </a>
-              </div>
+              <a href= {"/details/" + info.id } >
+                
+                <div className='location-pin'>
+                  <Marker latitude={info.lat} longitude={info.lon}></Marker>
+                </div>
+              </a>
 
         </>)
       })}

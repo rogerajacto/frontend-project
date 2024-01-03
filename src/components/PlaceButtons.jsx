@@ -14,7 +14,7 @@ function buttonFuncionality() {
             <>
                 <div className="place-buttons-container">
                     <a href={"/details/" + nextCity} >
-                        <button className="place-button">Next Place</button>
+                        <button className="place-button">Next Place <i className="fa-solid fa-arrow-right"> </i></button>
                     </a>
                 </div>
             </>
@@ -26,10 +26,10 @@ function buttonFuncionality() {
             <>
                 <div className="place-buttons-container">
                     <a href={"/details/" + previousCity} >
-                        <button className="place-button">Previous Place</button>
+                        <button className="place-button"> <i className="fa-solid fa-arrow-left"></i> Previous Place </button>
                     </a>
                     <a href={"/details/" + nextCity} >
-                        <button className="place-button">Next Place</button>
+                        <button className="place-button"> Next Place <i className="fa-solid fa-arrow-right"> </i> </button>
                     </a>
                 </div>
             </>
@@ -40,7 +40,7 @@ function buttonFuncionality() {
         <>
             <div className="place-buttons-container">
                 <a href={"/details/" + previousCity} >
-                    <button className="place-button">Previous Place</button>
+                    <button className="place-button"> <i className="fa-solid fa-arrow-left"></i> Previous Place  </button>
                 </a>
             </div>
         </>
