@@ -13,6 +13,7 @@ function SpecificMap ({city}) {
 
     return(
         <>
+        
             <div className="specific-map">
                 <Map style={{width: "100%", height:"500px"}}
 

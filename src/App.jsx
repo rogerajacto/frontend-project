@@ -9,6 +9,7 @@ import PlaceDetailView from "./Views/PlaceDetailView";
 import { useState } from "react";
 import { useEffect } from "react";
 import MainMap from "./components/MainMap";
+import PageNotFoundView from "./Views/PageNotFoundView";
 
 
 
@@ -29,7 +30,7 @@ function App() {
       getInfo()
   },[])
 
-  console.log(locationInfo)
+  // console.log(locationInfo)
 
   return (
     <>
@@ -59,6 +60,9 @@ function App() {
 
       <Route path="/details/:id">
       {(params) => <PlaceDetailView id={params.id} />}
+      </Route>
+
+      <Route component={PageNotFoundView}>
       </Route>
 
     </Switch>

@@ -4,6 +4,7 @@ import Footer from "../components/Footer";
 import NavegationBar from "../components/NavigationBar";
 import Weather from "../components/Weather";
 import SpecificMap from "../components/SpecificMap";
+import PlaceButtons from "../components/PlaceButtons";
 
 function PlaceDetailView({id}) {
 
@@ -42,6 +43,14 @@ function PlaceDetailView({id}) {
   
       }
 
+      function geID() {
+        
+        if (city.id != undefined) {
+          return (<PlaceButtons cityID ={city} />)
+        }
+  
+      }
+
 
 
     return(
@@ -71,7 +80,10 @@ function PlaceDetailView({id}) {
             
             </div>
 
-        <Footer/>
+            {geID()}
+
+          <Footer/>
+          
         </div>
         </>
     )
