@@ -15,7 +15,24 @@ function SpecificMap ({city}) {
         <>
         
             <div className="specific-map">
-                <Map style={{width: "100%", height:"500px"}}
+                <Map style={{width: "100%", height:"30rem"}}
+
+                mapboxAccessToken= {SpecificMapTOKEN}
+
+                initialViewState={{
+
+                        latitude: lat,
+                        longitude: lon,
+                        zoom: 10
+                    }}
+                    mapStyle="mapbox://styles/rogerajacto/clqqlv09700xg01qrbhhdhsl2"
+                    >
+                        <NavigationControl/>
+
+                </Map>
+            </div>
+            <div className="specific-map-responsive">
+                <Map style={{width: "100%", height:"10rem"}}
 
                 mapboxAccessToken= {SpecificMapTOKEN}
 

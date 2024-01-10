@@ -1,6 +1,7 @@
 import * as React from 'react';
 import "mapbox-gl/dist/mapbox-gl.css"
 import  Map,{ Marker, NavigationControl} from 'react-map-gl';
+import { Link } from 'wouter';
 
 
 
@@ -14,6 +15,13 @@ function MainMap({locationInfo}) {
     longitude: 2.3488,
     zoom: 2
   });
+
+  function test(params) {
+    
+    // alert ("123")
+
+    {<Link href='https://google.com'></Link>}
+  }
 
     return(
         <>
@@ -41,7 +49,7 @@ function MainMap({locationInfo}) {
               <a href= {"/details/" + info.id } >
                 
                 <div className='location-pin'>
-                  <Marker latitude={info.lat} longitude={info.lon}></Marker>
+                  <Marker onClick={test} latitude={info.lat} longitude={info.lon}></Marker>
                 </div>
               </a>
 

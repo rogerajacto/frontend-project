@@ -72,9 +72,10 @@ useEffect(function () {
                 <h3>{weatherData.weather?.[0].main}</h3>
                 <h3>{weatherData.weather?.[0].description}</h3>
             </div>
+            <div className="forecast">
             <hr/>
             <h3>Forecast:</h3>
-            <div className="forecast">
+            
                 {forecastInfo?.map(function (item) { 
                 return(
                     <>
@@ -83,6 +84,36 @@ useEffect(function () {
                         <img className="weather-icon" src={"https://openweathermap.org/img/wn/"+ item.weather?.[0].icon + ".png"} alt = "weathericon"></img>
                         <p>{item.weather[0].main}</p>
                         <hr />
+
+                    </>
+                )
+                
+            })}
+            </div>
+        </div>
+
+               
+        <div className="weather-container-responsive">
+
+            <div className="current-weather">
+                <h2>Current Weather</h2>
+                <img className="weather-icon" src={"https://openweathermap.org/img/wn/"+ weatherData.weather?.[0].icon + ".png"} alt = "weathericon"></img>
+                <h3>{Math.round(weatherData.main?.temp)}ºC</h3>
+
+            </div>
+            <div className="forecast">
+           
+            <h3>Forecast:</h3>
+            
+                {forecastInfo?.map(function (item) { 
+                return(
+                    <>
+                    <div className="weather-info-responsive">
+                        <p>{(item.dt_txt).substring(0,10)} : </p>
+                      
+                        <img className="weather-icon" src={"https://openweathermap.org/img/wn/"+ item.weather?.[0].icon + ".png"} alt = "weathericon"></img>
+                    </div>
+
 
                     </>
                 )

@@ -43,8 +43,10 @@ justify-content: end;
 align-items: center;
 gap: 10px;
 
+}
 
-
+.navegation-items-responsive{
+  display: none;
 }
 
 #name{
@@ -307,13 +309,6 @@ margin: 5px 20px;
   height: 400px ;
 }
 
-.add-location-background{
-  background: url("https://media.cntraveler.com/photos/5fc6818f3cfe1de2cab79372/16:9/w_1600%2Cc_limit/Amsterdam-GettyImages-840603854.jpg");
-  height: 400px;
-  background-position: top;
-  background-size: cover;
-  background-repeat: no-repeat;
-}
 
 .profile-card{
 
@@ -355,7 +350,13 @@ margin: 5px 20px;
 
 /* ADD LOCATION DESIGN */
 
-
+.add-location-background{
+  background: url("https://media.cntraveler.com/photos/5fc6818f3cfe1de2cab79372/16:9/w_1600%2Cc_limit/Amsterdam-GettyImages-840603854.jpg");
+  height: 400px;
+  background-position: top;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
 
 .form-container{
   display: flex;
@@ -473,7 +474,7 @@ form input{
 .city-info{
   width: 80%;
   padding: 30px;
-  padding-right: 150px;
+  padding-right: 50px;
 }
 
 .country-name, .city-date{
@@ -493,12 +494,20 @@ form input{
 
 /* WEATHER STYLES */
 
+
+
 .city-info-wrapper{
 display: flex;
 padding: 30px;
-/* margin-right: 100px; */
 }
 
+.weather-container-responsive{
+display: none;
+background: linear-gradient( to right , #ffffff, #a8a8a8);
+border-radius: 30px;
+padding: 30px;
+box-shadow: 0 5px 50px rgba(0,0,0,1);
+}
 
 .weather-container{
 
@@ -550,6 +559,10 @@ padding: 30px;
 cursor:  pointer;
 }
 
+.specific-map-responsive{
+display: none;
+}
+
 /* 404 STYLE */
 
 .not-found-img{
@@ -561,6 +574,7 @@ cursor:  pointer;
 
 .not-found-background{
   background: linear-gradient( to right , #30a3d0, #330867);
+  padding:0 0 2px;
   height: fit-content;
 }
 
@@ -594,4 +608,282 @@ cursor:  pointer;
   box-shadow:  5px 5px 50px rgba(0,0,0,1);
   transition: all 0.5s;
 
+}
+
+
+
+
+/* MEDIA QUERIS */
+
+@media screen and (max-width: 640px) {
+ 
+ 
+  /* NAV BAR */
+    #name{
+      display: none;
+    }
+    .navegation-items-list{
+      display: none;
+    }
+
+    .navegation-items-responsive{
+      
+      list-style-type: none;
+      display: flex;
+      justify-content: end;
+      align-items: center;
+      gap: 5px;
+    }
+
+    .nav-item{
+      text-align: center;
+      margin-top: 10px;
+      font-family: 'Playfair Display SC', serif;
+      color: #fff;
+      font-size: 1.5rem;
+      transition: all 0.2s;
+    }
+
+    .logo{
+      position: absolute;
+      left: 0;
+      top: 15px;
+       margin-right: 2em;
+    }
+
+    /* HERO */
+
+    .hero-title{
+      font-size: 1.5rem;
+      inline-size: 250px;
+    }
+
+    .button-container{
+      margin-top: 100px;
+    }
+    
+    .section-button{
+      width: 100px;
+      font-size: 0.7rem;
+      
+    }
+
+    /* LOCATION CARDS */
+
+    .card-container{
+      gap: 50px 25px; 
+      padding: 50px 25px;
+    }
+    
+    
+    .card-container .card {
+
+      width: 250px;
+      height: 200px;
+      border-radius: 15px;
+    }
+
+    .card-container .card:hover{
+      height: 250px;
+    }
+    
+    
+    .card-container .card .card-img-box{
+      top: 20px;
+      width: 200px;
+      height: 100px;
+    }
+    
+    .card-container .card:hover .card-img-box{
+      top: -50px;
+      scale: 0.75;
+    
+    }
+    
+    .card-container .card .card-content{
+      top: 100px;
+    }
+    .card-container:hover .card:hover .card-content{
+      top: 50px;
+      height: 800px;
+    }
+
+    .card-content p {
+      font-size: 0.8rem;
+      padding: auto;
+      margin: 20px;
+    }
+    .card-content h3 {
+      margin-top: 50px;
+      font-size: 1.2rem;
+    }
+
+/* PROFILE */
+.profile-card{
+  width: 85%;
+}
+
+.profile-card img{
+  float: none;
+  display: block;
+  margin: 0 auto;
+  width: 200px;
+  margin-bottom: 30px;
+}
+
+
+.profile-info p{
+  text-align: justify;
+  font-size: 0.7rem;
+}
+
+/* ADD LOCATION */
+
+.form-container{
+display: block;
+width: 300px;
+}
+
+.form-title{
+  font-family: 'Playfair Display SC', serif;
+  /* font-family: 'Varela Round', sans-serif; */
+  color: #444;
+  margin: 0 auto;
+  font-size: 1.2rem;
+  text-align: center;
+  padding: 10px;
+}
+
+ .add-location-card{
+  background-color: #FFF;
+  border-radius: 0 20px 20px 0;
+  padding: 10px;  
+  height: fit-content;
+  border-left: 10px solid #330867 ;
+}
+
+
+
+form input{
+  border: 3px solid #444 ;
+  display: block;
+  text-align: center;
+  border-radius: 50px;
+  padding: 5px;
+  margin:10px auto;
+  margin-top: 5px;
+}
+
+
+.submit-button{
+  width: 50%;
+}
+
+
+.form-date{
+  display: flex;
+  gap: 5px;
+  margin: 15px;
+}
+
+
+
+
+
+
+
+
+
+
+    /* CITY DETAILS */
+
+    .city-info{
+      display: inline;
+    }
+    .city-details{
+      font-size: 0.7rem;
+    }
+
+    .city-info-wrapper{
+      display: block;
+    }
+    .place-buttons-container{
+
+      gap: 20px;
+    
+    }
+    
+    .place-button{
+      width: 120px;
+      font-size: 0.6rem;
+    }
+
+
+/* MAP */
+
+  .specific-map-responsive{
+    display: block;
+    }
+    .specific-map{
+      display: none;
+      }
+
+    /* WEATHER */
+
+    .forecast{
+      display: inline;
+    }
+
+    .forecast h3{
+      font-size: 1rem;
+    }
+
+    .weather-container{
+      display: none;
+    }
+    .weather-container-responsive{
+      display: flex;
+      align-items: baseline;
+      flex-wrap: nowrap;
+      justify-content: center;
+      border-radius: 0 0 30px 30px;
+      padding: 0px;
+      }
+
+    .weather-info-responsive{
+      display: flex;
+      align-items: center;
+      
+     
+    }
+
+
+    .weather-info-responsive p{
+      font-family: 'Playfair Display SC', serif;
+      color: #444;
+      margin: 0 auto;
+      font-size: 0.7rem;
+    }
+
+
+   .current-weather h2{
+    font-size: 1rem;
+
+   }
+
+
+   .footer-info{
+
+    height: fit-content;
+   }
+   .footer-info p{
+
+    font-size: 0.7rem;
+   }
+
+  /* 404 */
+
+  .not-found-img{
+    width: 250px;
+  }
 }

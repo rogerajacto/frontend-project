@@ -16,6 +16,8 @@ function Carousel({sliders}) {
         <>
         <div className="slider-container">
             <Swiper
+            loop={true}
+            autoplay={true}
             slidesPerView={1}
             pagination ={{clickable: true}}
             navigation>
@@ -24,7 +26,9 @@ function Carousel({sliders}) {
 
                     return(
                         <>
-                            <SwiperSlide><img className="slider-item" src={img.slideIMG} alt="image of NYC"></img></SwiperSlide>
+                            <SwiperSlide>
+                                <img className="slider-item" src={img.slideIMG} alt="image"></img>
+                            </SwiperSlide>
                         </>
                     )
                     
