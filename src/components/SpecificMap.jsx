@@ -6,7 +6,7 @@ import  Map,{ NavigationControl} from 'react-map-gl';
 
 function SpecificMap ({city}) {
 
-    const SpecificMapTOKEN = "pk.eyJ1Ijoicm9nZXJhamFjdG8iLCJhIjoiY2xxbzV0azg4MWdxcDJqcDk0a3U4b2hydiJ9.Q9S_qg1z8yyPy3VQpnzmuw";
+    const SpecificMapTOKEN = import.meta.env.VITE_SPECIFIC_MAP_TOKEN;
 
     const lat = city?.lat;
     const lon = city?.lon;

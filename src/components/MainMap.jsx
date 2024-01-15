@@ -1,13 +1,13 @@
 import * as React from 'react';
 import "mapbox-gl/dist/mapbox-gl.css"
-import  Map,{ Marker, NavigationControl} from 'react-map-gl';
+import  Map,{ Marker, NavigationControl, Popup} from 'react-map-gl';
 import { Link } from 'wouter';
 
 
 
 function MainMap({locationInfo}) {
 
-  const token = "pk.eyJ1Ijoicm9nZXJhamFjdG8iLCJhIjoiY2xxbWJhcmJqMndhdDJtbWtqa2lwemkwMSJ9.7BEVtTmhxdgP8ZdpdpNQNw";
+  const token = import.meta.env.VITE_MAIN_MAP_TOKEN;
 
   const [viewState, setViewState] = React.useState({
     
@@ -16,12 +16,6 @@ function MainMap({locationInfo}) {
     zoom: 2
   });
 
-  function test(params) {
-    
-    // alert ("123")
-
-    {<Link href='https://google.com'></Link>}
-  }
 
     return(
         <>
@@ -46,12 +40,14 @@ function MainMap({locationInfo}) {
       {locationInfo.data?.map(function (info) {
         return (<>
 
-              <a href= {"/details/" + info.id } >
                 
                 <div className='location-pin'>
-                  <Marker onClick={test} latitude={info.lat} longitude={info.lon}></Marker>
+                  <Marker latitude={info.lat} longitude={info.lon}>
+
+                    <a  href={"/details/" + info.id} className='marker-button'><i class="fa-solid fa-location-dot"></i></a>
+                  </Marker>
                 </div>
-              </a>
+                
 
         </>)
       })}

@@ -1,12 +1,6 @@
-import Footer from "../components/Footer";
-import NavegationBar from "../components/NavigationBar";
 
 
-
-
-
-
-function AddLocationView() {
+function AddLocationView({navbar}) {
 
     
 function AddInfo(event) {
@@ -25,21 +19,22 @@ function AddInfo(event) {
       
      
     console.log(newPlace)
-    return newPlace
+    document.querySelector(".add-location-card").reset()
+
 }
+    
 
     return(
         <>
          <div className="add-location-background">
-            <NavegationBar/>
 
-            
+            {navbar} 
 
             <div className="form-container">
             
             <h2 className="form-title">Please Leave Me a Suggestion for my next travel!</h2>
 
-            <form className="add-location-card" id="userForm" onSubmit={AddInfo} > 
+            <form className="add-location-card" id="userForm" onSubmit={AddInfo}> 
 
                 <label><i className="fa-solid fa-city"></i>City</label>
                 <input type="text" placeholder="Give Us A City!" name = "City"></input>
@@ -67,7 +62,7 @@ function AddInfo(event) {
 
             </form>
             </div>
-            <Footer/>
+            
          </div>
 
         </>

@@ -44,29 +44,31 @@ function App() {
         <LocationCard locationInfo={locationInfo}/>
         <MainMap locationInfo={locationInfo}/>
         
-        <Footer/>
+        
         
         
       </Route>
 
       <Route path="/about-me">
-        <ProfileView/>
+        <ProfileView navbar={<NavegationBar/>}/>
 
       </Route>
 
       <Route path="/add-location">
-        <AddLocationView/>
+        <AddLocationView navbar={<NavegationBar/>}/>
       </Route>
 
       <Route path="/details/:id">
-      {(params) => <PlaceDetailView id={params.id} />}
+      {(params) => <PlaceDetailView id={params.id} navbar={<NavegationBar/>}/>}
       </Route>
 
-      <Route component={PageNotFoundView}>
+      <Route>
+        <PageNotFoundView navbar={<NavegationBar/>}/>
       </Route>
 
+      
     </Switch>
-
+  <Footer/>
   
     </>
   )

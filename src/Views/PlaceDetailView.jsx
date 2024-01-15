@@ -1,12 +1,10 @@
 import { useEffect, useState } from "react";
 import Carousel from "../components/Carousel";
-import Footer from "../components/Footer";
-import NavegationBar from "../components/NavigationBar";
 import Weather from "../components/Weather";
 import SpecificMap from "../components/SpecificMap";
 import PlaceButtons from "../components/PlaceButtons";
 
-function PlaceDetailView({id}) {
+function PlaceDetailView({id, navbar}) {
 
     const [city, setcity] = useState({});
 
@@ -56,15 +54,16 @@ function PlaceDetailView({id}) {
     return(
         <>
 
-        <div className="profile-background">
-            <NavegationBar/>
+            <div className="place-detail-background">
 
-            <Carousel sliders={city.sliders}/>
+                {navbar}
+                <Carousel sliders={city.sliders}/>
+            </div>      
 
             <hr></hr>
-            
+          
             <h2 className="city-name"><i class="fa-solid fa-city"></i>{city.city}</h2>
-
+        
             <div className="city-info-wrapper">
                 <div className="city-info">
                     
@@ -81,10 +80,7 @@ function PlaceDetailView({id}) {
             </div>
 
             {geID()}
-
-          <Footer/>
-          
-        </div>
+       
         </>
     )
 }

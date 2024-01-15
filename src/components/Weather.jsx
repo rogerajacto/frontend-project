@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 
 function Weather({cityWeather}) {
 
-const weatherKey = "2cd7b6ab14f71dfaf8906c1a89abbbf4";
+const weatherKey = import.meta.env.VITE_WEATHER_API_KEY;
 const weatherURL = "https://api.openweathermap.org/data/2.5/";
 
 

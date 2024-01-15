@@ -1,11 +1,9 @@
-import NavegationBar from "../components/NavigationBar"
 
-
-function PageNotFoundView() {
+function PageNotFoundView({navbar}) {
     return(
         <>
             <div className="not-found-background">
-                <NavegationBar/>  
+                {navbar}
             </div>
                 <h1> You sure this is where you want to be??</h1>
                 <h2> 404</h2>
