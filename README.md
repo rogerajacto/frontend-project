@@ -1,6 +1,6 @@
-#Travel Blog App
+#  Travel Blog App
 
-Welcome to my travel blog App! this web site has the porpuse of showcasing my travels experiences. This web application was developed using React.
+Welcome to my travel blog App! This web site has the porpuse of showcasing my travels experiences. This web application was developed using React.
 
 ## Features:
 
@@ -15,7 +15,7 @@ Welcome to my travel blog App! this web site has the porpuse of showcasing my tr
 2. Run "npm install" to install each dependencie.
 3. Create a new ".env file" with your API keys for OpenWeatherMap and Mapbox.
 
-Dependencies:
+### Dependencies:
  - React
  - Wouter
  - Swiper
@@ -23,5 +23,5 @@ Dependencies:
  - Mapbox
 
 
- Usage: 
+ ### Usage: 
  Run "npm start" to start the development server and view the page in your browser.
