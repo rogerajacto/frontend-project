@@ -127,6 +127,30 @@
             {"slideIMG":"https://www.ridethatmonkey.com/wp-content/uploads/2019/10/alx_mundo-lista-tripadvisor-20100720-014_original3.jpeg"}
         ]
 
+    },
+    {   
+        "id": "6",
+        "city":"London",
+        "country":"England",
+        "from": "05-08-2004",
+        "to": "17-08-2004",
+        "weather_name":"london",
+        "mainIMG": "https://media.iatiseguros.com/wp-content/uploads/sites/6/2020/03/30121609/big-ben-londres.jpg",
+        "lat": "51.5085",
+        "lon": "-0.1257",
+
+        "info":"The City of London, often referred to simply as 'the City,' is a historic and financial district located at the heart of London, England. While London as a whole is a sprawling metropolis, the City represents its ancient core and serves as a global financial powerhouse. Established by the Romans in the 1st century AD, the City has a rich history that spans millennia. Its iconic landmarks include the Tower of London, a historic castle on the River Thames, and St. Paul's Cathedral, an architectural marvel designed by Sir Christopher Wren after the Great Fire of London in 1666. These structures are testament to the City's endurance through centuries of change and development. The City is unique in that it operates as a distinct administrative and financial entity within London. It is governed by the City of London Corporation, a local authority with its own police force and mayor. This ancient municipal structure, with its livery companies and traditional ceremonies, maintains a sense of autonomy within the larger London landscape. Financially, the City is a global financial hub, home to the London Stock Exchange and the Bank of England. The iconic skyscrapers of Canary Wharf, just east of the traditional City, further enhance its status as a financial center. The City's influence extends far beyond the United Kingdom, as it plays a pivotal role in international finance, trade, and business. One of the key features of the City is its role as a leading global financial center. The London Stock Exchange, founded in 1801, facilitates the trading of stocks and securities. Additionally, the Bank of England, established in 1694, acts as the UK's central bank and is responsible for issuing currency and maintaining monetary stability. The City is also renowned for its financial services, including banking, insurance, and investment management. Major financial institutions and multinational corporations have headquarters or significant operations within the district. The presence of these institutions has contributed to the City's economic significance and global influence. Culturally, the City is a blend of modernity and tradition. While contemporary skyscrapers dominate the skyline, historic sites like the Guildhall and Leadenhall Market harken back to its medieval origins. The City is also a cultural hub, hosting numerous events, museums, and galleries, including the Museum of London and the Barbican Centre. In recent decades, the City has undergone significant transformations, with new developments and modern architecture reshaping its skyline. The expansion of financial services, coupled with infrastructural improvements, has solidified the City's position as a key player in the global economy.While the City of London is often associated with finance and business, it is also a vibrant residential and commercial area. In recent years, efforts have been made to diversify its offerings, creating a more balanced and sustainable community. The City remains a symbol of London's historical roots and its ability to adapt and thrive in the face of evolving challenges.",
+        
+        "sliders":[
+
+            {"slideIMG":"https://assets.editorial.aetnd.com/uploads/2019/03/topic-london-gettyimages-760251843-feature.jpg"},
+
+            {"slideIMG":"https://www.melhoresdestinos.com.br/wp-content/uploads/2019/06/passagens-aereas-londres-capa2019-05.jpg"},
+            
+            {"slideIMG":"https://minhamochiladeviagem.com/wp-content/uploads/2023/06/London-Pass-4-e1687225339425.jpg"}
+        ]
+
+
     }
 
 

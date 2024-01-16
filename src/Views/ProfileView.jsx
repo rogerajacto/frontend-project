@@ -11,10 +11,10 @@ function ProfileView({navbar}) {
             <div className="profile-info">
                 <h2>Roger a jacto</h2>
                 <div className="profile-info">
-                    <p><strong><i class="fa-solid fa-calendar-days"></i> Age:</strong>  28 years</p>
-                    <p><strong><i class="fa-regular fa-flag"></i> Nacionality:</strong> Portuguese</p>
-                    <p><strong><i class="fa-regular fa-envelope"></i> Email:</strong> rogerajacto@gmail.com</p>
-                    <p><strong><i class="fa-solid fa-mobile-retro"></i> Cellphone:</strong> 123123123</p>
+                    <p><strong><i className="fa-solid fa-calendar-days"></i> Age:</strong>  28 years</p>
+                    <p><strong><i className="fa-regular fa-flag"></i> Nacionality:</strong> Portuguese</p>
+                    <p><strong><i className="fa-regular fa-envelope"></i> Email:</strong> rogerajacto@gmail.com</p>
+                    <p><strong><i className="fa-solid fa-mobile-retro"></i> Cellphone:</strong> 123123123</p>
 
                 </div>
                 <p>Welcome to my corner of the internet! I'm Roger, an avid blogger fueled by a love for travels. Here, I craft a tapestry of words to weave together stories, insights, and discoveries in the realm of traveveling. Whether I'm unraveling the complexities of travel, delving into it's nuances, or sharing my unique perspective. Every post is a journey!

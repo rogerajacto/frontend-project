@@ -62,13 +62,13 @@ function PlaceDetailView({id, navbar}) {
 
             <hr></hr>
           
-            <h2 className="city-name"><i class="fa-solid fa-city"></i>{city.city}</h2>
+            <h2 className="city-name"><i className="fa-solid fa-city"></i>{city.city}</h2>
         
             <div className="city-info-wrapper">
                 <div className="city-info">
                     
-                    <h3 className="country-name"><i class="fa-solid fa-flag"></i>{city.country}</h3>
-                    <h3 className="city-date"><i class="fa-solid fa-calendar-days"></i>{city.from + " - " + city.to} </h3>
+                    <h3 className="country-name"><i className="fa-solid fa-flag"></i>{city.country}</h3>
+                    <h3 className="city-date"><i className="fa-solid fa-calendar-days"></i>{city.from + " - " + city.to} </h3>
                     <p className="city-details">{city.info}</p> 
                     
                     {getCoordinates()}

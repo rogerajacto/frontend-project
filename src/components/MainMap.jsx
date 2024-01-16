@@ -44,7 +44,7 @@ function MainMap({locationInfo}) {
                 <div className='location-pin'>
                   <Marker latitude={info.lat} longitude={info.lon}>
 
-                    <a  href={"/details/" + info.id} className='marker-button'><i class="fa-solid fa-location-dot"></i></a>
+                    <a  href={"/details/" + info.id} className='marker-button'><i className="fa-solid fa-location-dot"></i></a>
                   </Marker>
                 </div>
                 
