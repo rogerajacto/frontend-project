@@ -4,7 +4,7 @@ import Weather from "../components/Weather";
 import SpecificMap from "../components/SpecificMap";
 import PlaceButtons from "../components/PlaceButtons";
 
-function PlaceDetailView({id, navbar}) {
+function PlaceDetailView({id, navbar,locationInfo}) {
 
     const [city, setcity] = useState({});
 
@@ -44,7 +44,7 @@ function PlaceDetailView({id, navbar}) {
       function geID() {
         
         if (city.id != undefined) {
-          return (<PlaceButtons cityID ={city} />)
+          return (<PlaceButtons cityinfo = {locationInfo} citySpecifics ={city} />)
         }
   
       }

@@ -59,7 +59,7 @@ function App() {
       </Route>
 
       <Route path="/details/:id">
-      {(params) => <PlaceDetailView id={params.id} navbar={<NavegationBar/>}/>}
+      {(params) => <PlaceDetailView id={params.id} navbar={<NavegationBar/>} locationInfo={locationInfo}/>}
       </Route>
 
       <Route>

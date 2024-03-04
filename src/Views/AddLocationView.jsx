@@ -16,9 +16,14 @@ function AddInfo(event) {
         To: fd.get("To"),
         Textarea: fd.get ("textarea")
     } 
+      if (newPlace.City == "" || newPlace.Country =="") {
+        return(
+            alert("City and Country Must be filled!")
+            
+      )}
       
-     
-    console.log(newPlace)
+     else(console.log(newPlace))
+    
     document.querySelector(".add-location-card").reset()
 
 }
